@@ -12,7 +12,7 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score
 from sklearn.model_selection import cross_val_score
 
 # reading and printing the dataset
-data = pd.read_excel(r"C:\Users\ameen\OneDrive\Desktop\OneDrive\winequality-red.xlsx")
+data = pd.read_excel('winequality-red.xlsx')
 
 # Convert the wine quality into a binary variable, good or bad, based on a threshold value of 6.5
 data["quality_bin"] = np.where(data['quality'] > 6.5, 'good quality', 'bad quality')
@@ -36,7 +36,7 @@ model.fit(X_train, Y_train)
 st.markdown("<h1 style='text-align: center; color: purple; font-family: cursive;'>Wine Quality Prediction model</h1>", unsafe_allow_html=True)
 
 # Display an image
-image = Image.open(r"C:\Users\ameen\OneDrive\Pictures\wine.png")
+image = Image.open('wine.png')
 st.image(image, use_column_width=True)
 
 st.markdown("""
